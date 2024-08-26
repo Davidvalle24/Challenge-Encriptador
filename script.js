@@ -1,3 +1,9 @@
+// Función para validar el texto
+function validarTexto(texto) {
+    const regex = /^[a-z\s]*$/;  // Solo permite letras minúsculas y espacios
+    return regex.test(texto);
+}
+
 // Función para encriptar el texto
 function encriptar(texto) {
     let textoEncriptado = texto
@@ -23,7 +29,10 @@ function desencriptar(textoEncriptado) {
 // Vinculamos las funciones a los botones
 document.getElementById("botonEncriptar").onclick = function() {
     const texto = document.getElementById("textoEntrada").value;
-    if (texto.trim() === "") {
+    if (!validarTexto(texto)) {
+        document.getElementById("textoSalida").textContent = "Error: Solo se permiten letras minúsculas y sin acentos.";
+        document.getElementById("botonCopiar").style.display = "none"; // Ocultar botón de copiar
+    } else if (texto.trim() === "") {
         document.getElementById("textoSalida").textContent = "Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.";
         document.getElementById("botonCopiar").style.display = "none"; // Ocultar botón de copiar
     } else {
@@ -35,7 +44,10 @@ document.getElementById("botonEncriptar").onclick = function() {
 
 document.getElementById("botonDesencriptar").onclick = function() {
     const textoEncriptado = document.getElementById("textoEntrada").value;
-    if (textoEncriptado.trim() === "") {
+    if (!validarTexto(textoEncriptado)) {
+        document.getElementById("textoSalida").textContent = "Error: Solo se permiten letras minúsculas y sin acentos.";
+        document.getElementById("botonCopiar").style.display = "none"; // Ocultar botón de copiar
+    } else if (textoEncriptado.trim() === "") {
         document.getElementById("textoSalida").textContent = "Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.";
         document.getElementById("botonCopiar").style.display = "none"; // Ocultar botón de copiar
     } else {
