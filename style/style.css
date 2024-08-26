@@ -38,6 +38,7 @@ body {
 .contenedor_selector_izquierdo {
     flex: 2;
     padding-right: 40px;
+    width: auto;
 }
 
 #textoEntrada {
@@ -105,14 +106,22 @@ button:hover {
         padding: 20px;
     }
 
-    .contenedor_selector_derecho {
-        display: none; /* Oculta la imagen en móviles */
+   /* .contenedor_selector_derecho {
+        display: none;  Oculta la imagen en móviles 
+    }*/
+
+    .contenedor_selector_derecho img {
+        display: none; /* Mantén la imagen oculta en móviles */
     }
 
-    .contenedor_selector_izquierdo {
+
+    /*.contenedor_selector_izquierdo {
         padding-right: 0;
+    }*/
+    
+    .contenedor_selector_izquierdo {
+        padding: 0 10px; /* Ajusta el padding del contenedor */
     }
-
     .botones {
         flex-direction: column;
         gap: 10px;
