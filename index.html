@@ -13,20 +13,29 @@
             <header>
                 <h1>Encriptador de texto</h1>
             </header>
-            <textarea id="textoEntrada" placeholder="Ingrese el texto aquí"></textarea>
-            <div class="botones">
-                <button id="botonEncriptar">Encriptar</button>
-                <button id="botonDesencriptar">Desencriptar</button>
-                <button id="botonLimpiar">Limpiar</button>
-            </div>
+            <main class = "presentacion">
+             <textarea id="textoEntrada" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="botones">
+                    <button id="botonEncriptar">Encriptar</button>
+                    <button id="botonDesencriptar">Desencriptar</button>
+                    <button id="botonLimpiar">Limpiar</button>
+                </div>
             <p class="nota">🔒 Solo letras minúsculas y sin acentos</p>
+            </main>
         </div>
         <div class="contenedor_selector_derecho">
             <img src="imagen-lupa.png" alt="Imagen descriptiva">
             <p id="textoSalida">Ningún mensaje fue encontrado</p>
             <button id="botonCopiar" style="display: none;">Copiar</button>
         </div>
-    </div>
+        </div>
+        <footer class="footer">
+            <p>Desarrollado por David Mejia Valle</p>
+            <a href="https://github.com/Davidvalle24/Challenge-Encriptador" target="_blank">
+                <img src="github.png" alt="GitHub Logo" style="width: 24px; height: 24px;" class="icono-github">
+            </a>
+        </footer>
+        
     <script src="script.js"></script>
 </body>
 </html>

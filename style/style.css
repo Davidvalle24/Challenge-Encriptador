@@ -16,7 +16,8 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between; /* Espacio entre el contenido y el footer */
     align-items: center;
     margin: 0;
     padding: 20px;
@@ -26,13 +27,15 @@ body {
 .contenedor {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     background-color: var(--color-secundario);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 40px;
+    padding: 80px;
     transition: all 0.3s ease-in-out;
+    margin-bottom: 0; /* Elimina margen inferior */
+    flex-grow: 1; /* Permite que el contenedor principal crezca para ocupar el espacio disponible */
 }
 
 .contenedor_selector_izquierdo {
@@ -99,6 +102,34 @@ button:hover {
     border: 2px solid var(--color-borde);
 }
 
+/* Estilos para el footer */
+.footer {
+    background-color: rgb(234, 241, 254);
+    width: 120%; 
+    max-width: 1350px; /* debeo de asegurarme q coincida con el max-width del contenedor */
+    text-align: center;
+    padding: 2px 0px  2px 0px;
+    margin-top: auto; /* Empuja el footer hacia la parte inferior */
+    border-radius: 8px;
+    font-size: small;
+    
+}
+
+.footer p {
+    display: inline-flex; /* Asegura que el texto y el ícono estén alineados */
+    align-items: center; /* Alinea verticalmente al centro */
+    justify-content: center;
+    margin: 0;
+}
+
+.icono-github {
+    margin-left: 8px; /* Espacio entre el texto y el ícono */
+    width: 24px; /* Ajusta el tamaño del ícono */
+    height: 24px;
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+}
+
+
 /* Responsive para móviles: los botones se apilan verticalmente */
 @media (max-width: 480px) {
     .contenedor {
@@ -106,19 +137,11 @@ button:hover {
         padding: 20px;
     }
 
-   /* .contenedor_selector_derecho {
-        display: none;  Oculta la imagen en móviles 
-    }*/
-
     .contenedor_selector_derecho img {
-        display: none; /* Mantén la imagen oculta en móviles */
+        display: none; 
+        /* Mantén la imagen oculta en móviles */
     }
 
-
-    /*.contenedor_selector_izquierdo {
-        padding-right: 0;
-    }*/
-    
     .contenedor_selector_izquierdo {
         padding: 0 10px; /* Ajusta el padding del contenedor */
     }
