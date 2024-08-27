@@ -13,7 +13,7 @@
 
 body {
     font-family: var(--fuente-principal);
-    background-color: var(--color-fondo);
+    background-color: #f4f4f9;
     color: var(--color-texto);
     display: flex;
     flex-direction: column;
@@ -159,3 +159,5 @@ button:hover {
         height: 120px;
     }
 }
+
+ /* agregando pequeño comentario */
